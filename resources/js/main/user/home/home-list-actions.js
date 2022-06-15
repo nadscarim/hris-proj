@@ -1,5 +1,15 @@
+import axios from "axios"
 
 export const setModuleState = (payload) => async (dispatch) => {
+    dispatch({
+        type: 'SET_HOME_STATE',
+        payload
+    })
+}
+
+export const toggleModal = () => async (dispatch) => {
+    
+    
     dispatch({
         type: 'SET_HOME_STATE',
         payload
