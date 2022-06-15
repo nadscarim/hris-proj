@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user/user');
-});
+Route::get('/', 'App\Http\Controllers\AttendanceLogController@index')->name('index');
 
+Route::post('/timeInOut', 'App\Http\Controllers\AttendanceLogController@timeInOut');
+// Route::post('/timeOut', 'App\Http\Controllers\AttendanceLogController@timeOut');

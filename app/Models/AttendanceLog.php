@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class AttendanceLog extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }
